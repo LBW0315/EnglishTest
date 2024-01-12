@@ -22,7 +22,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(21,'four',1,'
 insert ignore into words (id, word, schoolyear, unit, mean) values(22,'I''m',1,'U0-1 ','= I am');
 insert ignore into words (id, word, schoolyear, unit, mean) values(23,'welcome to ….',1,'U0-1 ','…へようこそ。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(24,'junior high (school)',1,'U0-1 ','中学校');
-insert ignore into words (id, word, schoolyear, unit, mean) values(25,'what's',1,'U0-1 ','= what is');
+insert ignore into words (id, word, schoolyear, unit, mean) values(25,'what''s',1,'U0-1 ','= what is');
 insert ignore into words (id, word, schoolyear, unit, mean) values(26,'food',1,'U0-1 ','食べ物');
 insert ignore into words (id, word, schoolyear, unit, mean) values(27,'do',1,'U0-1 ','《助》①［疑問文や応答を作る］　②[否定分や否定の命令文を作る] / 《動》①（…を）する，行う　②暮らす');
 insert ignore into words (id, word, schoolyear, unit, mean) values(28,'like',1,'U0-1 ','…を好む，…が好きである');
@@ -645,7 +645,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(644,'oops',1,
 insert ignore into words (id, word, schoolyear, unit, mean) values(645,'careful',1,'U7-S3','注意深い');
 insert ignore into words (id, word, schoolyear, unit, mean) values(646,'history',1,'U7-S3','歴史');
 insert ignore into words (id, word, schoolyear, unit, mean) values(647,'still',1,'U7-S3','まだ，今でも');
-insert ignore into words (id, word, schoolyear, unit, mean) values(648,'(Kaito)'s',1,'U7-S3','［名詞の所有格を作る］（海斗）の');
+insert ignore into words (id, word, schoolyear, unit, mean) values(648,'Kaito''s',1,'U7-S3','［名詞の所有格を作る］（海斗）の');
 insert ignore into words (id, word, schoolyear, unit, mean) values(649,'Here you are.',1,'U7-S3','はい，どうぞ。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(650,'be careful with',1,'U7-S3','…の扱いに気をつける');
 insert ignore into words (id, word, schoolyear, unit, mean) values(651,'think',1,'U7-UA','①…だと思う　②考える，思う');
@@ -658,10 +658,10 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(657,'hour',1,
 insert ignore into words (id, word, schoolyear, unit, mean) values(658,'stomachache',1,'LT2','胃痛，腹痛');
 insert ignore into words (id, word, schoolyear, unit, mean) values(659,'fever',1,'LT2','熱');
 insert ignore into words (id, word, schoolyear, unit, mean) values(660,'toothache',1,'LT2','歯痛');
-insert ignore into words (id, word, schoolyear, unit, mean) values(661,'What's wrong?',1,'LT2','どうかしたのですか。');
-insert ignore into words (id, word, schoolyear, unit, mean) values(662,'That's too bad.',1,'LT2','それはいけませんね。');
+insert ignore into words (id, word, schoolyear, unit, mean) values(661,'What''s wrong?',1,'LT2','どうかしたのですか。');
+insert ignore into words (id, word, schoolyear, unit, mean) values(662,'That''s too bad.',1,'LT2','それはいけませんね。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(663,'take a rest',1,'LT2','ひと休みする');
-insert ignore into words (id, word, schoolyear, unit, mean) values(664,'nurse's office',1,'LT2','保健室');
+insert ignore into words (id, word, schoolyear, unit, mean) values(664,'nurse''s office',1,'LT2','保健室');
 insert ignore into words (id, word, schoolyear, unit, mean) values(665,'nose',1,'LT2','【小】鼻');
 insert ignore into words (id, word, schoolyear, unit, mean) values(666,'leg',1,'LT2','【小】脚');
 insert ignore into words (id, word, schoolyear, unit, mean) values(667,'doctor',1,'LT2','医者，医師');
@@ -683,7 +683,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(682,'video ga
 insert ignore into words (id, word, schoolyear, unit, mean) values(683,'forward',1,'U8-S1','［look forward to …］を楽しみに待つ');
 insert ignore into words (id, word, schoolyear, unit, mean) values(684,'then',1,'U8-S1','《名》そのとき / 《副》①それから，その次に　②それでは，それなら，そうすると　③そのとき（に）');
 insert ignore into words (id, word, schoolyear, unit, mean) values(685,'bye',1,'U8-S1','さよなら，バイバイ');
-insert ignore into words (id, word, schoolyear, unit, mean) values(686,'What's up?',1,'U8-S1','どうしたのですか。');
+insert ignore into words (id, word, schoolyear, unit, mean) values(686,'What''s up?',1,'U8-S1','どうしたのですか。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(687,'sound like',1,'U8-S1','…のように聞こえる，思える');
 insert ignore into words (id, word, schoolyear, unit, mean) values(688,'look forward to',1,'U8-S1','…を楽しみに待つ');
 insert ignore into words (id, word, schoolyear, unit, mean) values(689,'See you.',1,'U8-S1','またね。');
@@ -692,7 +692,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(691,'house',1
 insert ignore into words (id, word, schoolyear, unit, mean) values(692,'shop',1,'U8-S1','《名》店 / 《動》買い物をする');
 insert ignore into words (id, word, schoolyear, unit, mean) values(693,'look forward to',1,'U8-S1','…を楽しみに待つ');
 insert ignore into words (id, word, schoolyear, unit, mean) values(694,'video',1,'U8-S1','映像，動画');
-insert ignore into words (id, word, schoolyear, unit, mean) values(695,'what's up?',1,'U8-S1','どうしたのですか。');
+insert ignore into words (id, word, schoolyear, unit, mean) values(695,'what''s up?',1,'U8-S1','どうしたのですか。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(696,'decorate',1,'U8-S2','…を飾る');
 insert ignore into words (id, word, schoolyear, unit, mean) values(697,'prepare',1,'U8-S2','（…の）準備をする，備える');
 insert ignore into words (id, word, schoolyear, unit, mean) values(698,'say',1,'U8-S2','①（…を）言う，…だと言う　②…と書いてある');
@@ -708,7 +708,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(707,'forget',
 insert ignore into words (id, word, schoolyear, unit, mean) values(708,'course',1,'U8-S3','［of course］もちろん');
 insert ignore into words (id, word, schoolyear, unit, mean) values(709,'Oh, my goodness!',1,'U8-S3','（驚きを表して）えっ。おや。まあ。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(710,'of course',1,'U8-S3','もちろん');
-insert ignore into words (id, word, schoolyear, unit, mean) values(711,'You're welcome.',1,'U8-S3','どういたしまして。');
+insert ignore into words (id, word, schoolyear, unit, mean) values(711,'You''re welcome.',1,'U8-S3','どういたしまして。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(712,'present',1,'U8-S3','プレゼント');
 insert ignore into words (id, word, schoolyear, unit, mean) values(713,'come in',1,'U8-S3','入る');
 insert ignore into words (id, word, schoolyear, unit, mean) values(714,'How nice!',1,'U8-S3','いいね。すばらしい。うれしい。');
@@ -734,7 +734,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(733,'Lily',1,
 insert ignore into words (id, word, schoolyear, unit, mean) values(734,'Smith',1,'U9-S1','スミス[姓]');
 insert ignore into words (id, word, schoolyear, unit, mean) values(735,'Kenya',1,'U9-S1','ケニア[国名]');
 insert ignore into words (id, word, schoolyear, unit, mean) values(736,'in need',1,'U9-S1','困っている');
-insert ignore into words (id, word, schoolyear, unit, mean) values(737,'do one's best',1,'U9-S1','最善を尽くす');
+insert ignore into words (id, word, schoolyear, unit, mean) values(737,'do one''s best',1,'U9-S1','最善を尽くす');
 insert ignore into words (id, word, schoolyear, unit, mean) values(738,'country',1,'U9-S1','国');
 insert ignore into words (id, word, schoolyear, unit, mean) values(739,'hospital',1,'U9-S1','病院');
 insert ignore into words (id, word, schoolyear, unit, mean) values(740,'difficult',1,'U9-S1','難しい，困難な');
@@ -776,7 +776,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(775,'traffic 
 insert ignore into words (id, word, schoolyear, unit, mean) values(776,'Excuse me.',1,'LT3','すみません。失礼ですが。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(777,'look for',1,'LT3','…をさがす');
 insert ignore into words (id, word, schoolyear, unit, mean) values(778,'Pardon me?',1,'LT3','何とおっしゃいましたか。もう一度おっしゃってください。');
-insert ignore into words (id, word, schoolyear, unit, mean) values(779,'Let's see.',1,'LT3','［考えながら］ええと。そうですね。');
+insert ignore into words (id, word, schoolyear, unit, mean) values(779,'Let''s see.',1,'LT3','［考えながら］ええと。そうですね。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(780,'go along',1,'LT3','（通り・道）を進む');
 insert ignore into words (id, word, schoolyear, unit, mean) values(781,'street',1,'LT3','通り，街路');
 insert ignore into words (id, word, schoolyear, unit, mean) values(782,'post office',1,'LT3','郵便局');
@@ -786,7 +786,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(785,'down',1,
 insert ignore into words (id, word, schoolyear, unit, mean) values(786,'city hall',1,'LT3','市役所');
 insert ignore into words (id, word, schoolyear, unit, mean) values(787,'traffic',1,'LT3','交通');
 insert ignore into words (id, word, schoolyear, unit, mean) values(788,'song',1,'SA2','歌');
-insert ignore into words (id, word, schoolyear, unit, mean) values(789,'That's right.',1,'SA2','そのとおり。');
+insert ignore into words (id, word, schoolyear, unit, mean) values(789,'That''s right.',1,'SA2','そのとおり。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(790,'hero',1,'SA2','英雄，ヒーロー');
 insert ignore into words (id, word, schoolyear, unit, mean) values(791,'guess',1,'SA2','（…を）推測する');
 insert ignore into words (id, word, schoolyear, unit, mean) values(792,'voice',1,'SA2','声');
@@ -929,7 +929,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(928,'these',1
 insert ignore into words (id, word, schoolyear, unit, mean) values(929,'back',1,'U11-S3','戻って，返して');
 insert ignore into words (id, word, schoolyear, unit, mean) values(930,'beat',1,'U11-S3','どきどきする');
 insert ignore into words (id, word, schoolyear, unit, mean) values(931,'bring back',1,'U11-S3','…を思い出させる');
-insert ignore into words (id, word, schoolyear, unit, mean) values(932,'on one's way (to)',1,'U11-S3','（…へ行く）途中で');
+insert ignore into words (id, word, schoolyear, unit, mean) values(932,'on one''s way (to)',1,'U11-S3','（…へ行く）途中で');
 insert ignore into words (id, word, schoolyear, unit, mean) values(933,'heart',1,'U11-S3','心臓，心');
 insert ignore into words (id, word, schoolyear, unit, mean) values(934,'I know.',1,'U11-S3','（同意を表して）そうだね。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(935,'snowy',1,'U11-UA','【小】雪の降る');
@@ -1058,7 +1058,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(1057,'track a
 insert ignore into words (id, word, schoolyear, unit, mean) values(1058,'cooking',1,'WR','料理，料理法');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1059,'entrance',1,'WR','【小】入口');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1060,'moral education',1,'WR','【小】道徳');
-insert ignore into words (id, word, schoolyear, unit, mean) values(1061,'principal's office',1,'WR','【小】校長室');
+insert ignore into words (id, word, schoolyear, unit, mean) values(1061,'principal''s office',1,'WR','【小】校長室');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1062,'restroom',1,'WR','【小】お手洗い');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1063,'textbook',1,'WR','【小】教科書');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1064,'dictionary',1,'WR','【小】辞書');
@@ -1072,8 +1072,8 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(1071,'stapler
 insert ignore into words (id, word, schoolyear, unit, mean) values(1072,'swimming meet',1,'WR','【小】水泳大会');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1073,'volunteer day',1,'WR','【小】ボランティア・デー');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1074,'reading',1,'WR','【小】読書');
-insert ignore into words (id, word, schoolyear, unit, mean) values(1075,'Children's Day',1,'WR','【小】こどもの日');
-insert ignore into words (id, word, schoolyear, unit, mean) values(1076,'Dolls' Festival',1,'WR','【小】ひなまつり');
+insert ignore into words (id, word, schoolyear, unit, mean) values(1075,'Children''s Day',1,'WR','【小】こどもの日');
+insert ignore into words (id, word, schoolyear, unit, mean) values(1076,'Dolls'' Festival',1,'WR','【小】ひなまつり');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1077,'hiking',1,'WR','【小】ハイキング');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1078,'Star Festival',1,'WR','【小】七夕祭り');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1079,'garbage',1,'WR','【小】生ごみ');
@@ -1159,7 +1159,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(1158,'aunt',2
 insert ignore into words (id, word, schoolyear, unit, mean) values(1159,'uncle',2,'U1-S1','おじ，おじさん');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1160,'husband',2,'U1-S1','夫');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1161,'wife',2,'U1-S1','妻');
-insert ignore into words (id, word, schoolyear, unit, mean) values(1162,'the 'Golden Week' horidays',2,'U1-S1','ゴールデンウィーク');
+insert ignore into words (id, word, schoolyear, unit, mean) values(1162,'the Golden Week horidays',2,'U1-S1','ゴールデンウィーク');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1163,'airplane',2,'U1-S1','【小】飛行機');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1164,'be going to',2,'U1-S1','…するつもりだ');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1165,'far',2,'U1-S2','遠くに［へ］');
@@ -1299,7 +1299,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(1298,'phone',
 insert ignore into words (id, word, schoolyear, unit, mean) values(1299,'paper',2,'LW1','紙，用紙');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1300,'attach',2,'LW1','…をつける');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1301,'e-mail',2,'LW1','Eメール');
-insert ignore into words (id, word, schoolyear, unit, mean) values(1302,'I'm sorry (that) ….',2,'LW1','（…して）ごめんなさい。すみません。');
+insert ignore into words (id, word, schoolyear, unit, mean) values(1302,'I''m sorry (that) ….',2,'LW1','（…して）ごめんなさい。すみません。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1303,'take a look',2,'LW1','ちらりと見る，見てみる');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1304,'Bye for now,',2,'LW1','さようなら。それでは。［Eメールなどの結びの言葉］');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1305,'for now',2,'LW1','今のところは');
@@ -1369,7 +1369,7 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(1368,'host',2
 insert ignore into words (id, word, schoolyear, unit, mean) values(1369,'perfect',2,'U4-S1','完全な，完ぺきな，最適な');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1370,'have to',2,'U4-S1','…しなければならない');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1371,'has to',2,'U4-S1','…しなければならない');
-insert ignore into words (id, word, schoolyear, unit, mean) values(1372,'don't [doesn't] have to',2,'U4-S1','…しなくてよい');
+insert ignore into words (id, word, schoolyear, unit, mean) values(1372,'don''t [doesn''t] have to',2,'U4-S1','…しなくてよい');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1373,'host family',2,'U4-S1','ホストファミリー [ホームステイ先の家族]');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1374,'Mrs.',2,'U4-S2','［結婚している女性をさして］…さん，先生');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1375,'must',2,'U4-S2','…しなければならない');
@@ -1924,8 +1924,8 @@ insert ignore into words (id, word, schoolyear, unit, mean) values(1923,'hand ou
 insert ignore into words (id, word, schoolyear, unit, mean) values(1924,'evacuation drill',3,'U4-RT2','避難訓練');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1925,'every year',3,'U4-RT2','毎年');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1926,'what to',3,'U4-RT2','何を…すべきか');
-insert ignore into words (id, word, schoolyear, unit, mean) values(1927,'That's very kind of you.',3,'LT2','どうもご親切にありがとうございます。');
-insert ignore into words (id, word, schoolyear, unit, mean) values(1928,'That's very kind of you.',3,'LT2','どうもご親切にありがとうございます。');
+insert ignore into words (id, word, schoolyear, unit, mean) values(1927,'That''s very kind of you.',3,'LT2','どうもご親切にありがとうございます。');
+insert ignore into words (id, word, schoolyear, unit, mean) values(1928,'That''s very kind of you.',3,'LT2','どうもご親切にありがとうございます。');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1929,'would like … to ～',3,'LT2','…に～してほしい（のですが）');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1930,'legacy',3,'U5-扉','遺産');
 insert ignore into words (id, word, schoolyear, unit, mean) values(1931,'Gandhi',3,'U5-扉','ガンディー[姓]');
