@@ -1,110 +1,62 @@
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
-  <head>
-    <div th:replace="~{fragment :: meta}"></div>
-    
-    <div th:replace="~{fragment :: styles}"></div>
-    
-    <link th:href="@{/css/style.css}" rel="stylesheet" />
 
-    <title>英単語一覧</title>
-  </head>
-  <body>
-    <div class="engleague-wrapper">
-      <!-- ヘッダー -->
-      <div th:replace="~{fragment :: header}"></div>
+<head>
+	<div th:replace="~{fragment :: meta}"></div>
 
-      <main>
-        <div class="container pt-4 pb-5 samuraitravel-container">
-          <div class="row justify-content-center">
-            <div class="col-xxl-9 col-xl-10 col-lg-11">
-              <h1 class="mb-4 text-center">英単語一覧</h1>
-              
-              
-              この下を選択式にして検索できるようにしたい。
-              <div class="d-flex justify-content-between align-items-end flex-wrap">
-    			<form method="get" th:action="@{/admin/word}" class="mb-3">
-       			 <div class="input-group">
-            <!-- ドロップダウンメニューを追加 -->
-        	    <select class="form-control" name="unit" th:value="${unit}">
-       	         <option  th:value="${unit}" selected>U1</option>
-       	         <option  th:value="${unit}" selected>U2</option>
-       	         <option  th:value="${unit}" selected>U3</option>
-                <!-- 他の検索オプションを追加 -->
-        	    </select>
-     		       <input type="text" class="form-control" name="unit" th:value="${unit}" placeholder="検索キーワード">
-    		        <button type="submit" class="btn text-white shadow-sm engleagu-btn">検索</button>
-    		    </div>
-  			  </form>
-   				 <a href="#" class="btn text-white shadow-sm mb-3 samuraitravel-btn">登録</a>
-				</div>
+	<div th:replace="~{fragment :: styles}"></div>
 
-ここから下は既存のコード
-              <div class="d-flex justify-content-between align-items-end flex-wrap">
-				  <form method="get" th:action="@{/admin/word}" class="mb-3">
-					  <div class="input-group">
-						  <input type="text" class="form-control" name="unit" th:value="${unit}" placeholder="Unit名">
-						  <button type="submit" class="btn text-white shadow-sm engleagu-btn">検索</button>
-					  </div>
-				  </form>
-                <a
-                  href="#"
-                  class="btn text-white shadow-sm mb-3 samuraitravel-btn"
-                  >登録</a
-                >
-              </div>
-              
-              
-              
+	<link th:href="@{/css/style.css}" rel="stylesheet" />
 
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">英単語</th>
-                    <th scope="col">習う学年</th>
-                    <th scope="col">Unit</th>
-                    <th scope="col">意味</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr th:each="word : ${wordPage}">
-                    <td th:text="${word.getId()}"></td>
-                    <td th:text="${word.getWord()}"></td>
-                    <td th:text="${word.getSchoolyear()}"></td>
-                    <td th:text="${word.getUnit()}"></td>
-                    <td th:text="${word.getMean()}"></td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              <!-- ページネーション -->
-                             <div th:if="${wordPage.getTotalPages() > 1}" class="d-flex justify-content-center">
-                                 <nav aria-label="民宿一覧ページ">
-                                     <ul class="pagination">
-                                         <li class="page-item">
-                                             <span th:if="${wordPage.isFirst()}" class="page-link disabled">前</span>
-                                             <a th:unless="${wordPage.isFirst()}" th:href="@{/admin/words(page = ${wordPage.getNumber() - 1}, unit = ${unit})}" class="page-link engleague-page-link">前</a>
-                                         </li>
-                                         <li th:each="i : ${#numbers.sequence(0, wordPage.getTotalPages() - 1)}" class="page-item">
-                                             <span th:if="${i == wordPage.getNumber()}" class="page-link active samuraitravel-active" th:text="${i + 1}"></span>
-                                             <a th:unless="${i == wordPage.getNumber()}" th:href="@{/admin/word(page = ${i}, unit = ${unit})}" class="page-link engleague-page-link" th:text="${i + 1}"></a>
-                                         </li>
-                                         <li class="page-item">                        
-                                             <span th:if="${wordPage.isLast()}" class="page-link disabled">次</span>
-                                             <a th:unless="${wordPage.isLast()}" th:href="@{/admin/word(page = ${wordPage.getNumber() + 1}, unit = ${unit})}" class="page-link engleague-page-link">次</a>
-                                         </li>
-                                     </ul>
-                                 </nav> 
-                             </div> 
-            </div>
-          </div>
-        </div>
-      </main>
+	<title>英単語一覧</title>
+</head>
 
-      <!-- フッター -->
-      <div th:replace="~{fragment :: footer}"></div>
+<body>
+	<div class="engleague-wrapper">
+		<!-- ヘッダー -->
+		<div th:replace="~{fragment :: header}"></div>
 
-    <div th:replace="~{fragment :: scripts}"></div>
-  </body>
-</html>
+		<main>
+			<div class="container pt-4 pb-5 samuraitravel-container">
+				<div class="row justify-content-center">
+					<div class="col-xxl-9 col-xl-10 col-lg-11">
+						<h1 class="mb-4 text-center">英単語一覧</h1>
+
+
+						この下を選択式にして検索できるようにしたい。
+						<div class="d-flex justify-content-between align-items-end flex-wrap">
+							<form method="get" th:action="@{/admin/word}" class="mb-3">
+								<div class="input-group">
+									<!-- ドロップダウンメニューを追加 -->
+									<select class="form-control" name="unit" th:value="${unit}">
+										<option th:value="${unit}" selected>U1</option>
+										<option th:value="${unit}" selected>U2</option>
+										<option th:value="${unit}" selected>U3</option>
+										<!-- 他の検索オプションを追加 -->
+									</select>
+									<input type="text" class="form-control" name="unit" th:value="${unit}"
+										placeholder="検索キーワード">
+									<button type="submit" class="btn text-white shadow-sm engleagu-btn">検索</button>
+								</div>
+							</form>
+							<a href="#" class="btn text-white shadow-sm mb-3 samuraitravel-btn">登録</a>
+						</div>
+
+						ここから下は既存のコード
+						<p id="count" class="count">3</p>
+						<div id="wrap" class="wrap">
+							<span id="typed" class="typed"></span><span id="untyped">なぜ入力されない？</span>
+						</div>
+						<button id="start">スタート</button>
+
+						<script type="text/javascript" src="main.js"></script>
+</body>
+</main>
+
+<!-- フッター -->
+<div th:replace="~{fragment :: footer}"></div>
+
+<div th:replace="~{fragment :: scripts}"></div>
+</body>
+
+</htmlhttp://localhost:8080/>
