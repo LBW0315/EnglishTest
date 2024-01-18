@@ -25,7 +25,7 @@
 
 						<!-- この下を選択式にして検索できるようにしたい。 -->
 						<div class="d-flex justify-content-between align-items-end flex-wrap">
-							<form method="get" th:action="@{/admin/word}" class="mb-3">
+							<form method="get" th:action="@{/rangeselect}" class="mb-3">
 								<div class="input-group">
 									<!-- ドロップダウンメニューを追加 -->
 									<select class="form-control" name="unit" th:value="${unit}">
@@ -42,7 +42,7 @@
 							<a href="#" class="btn text-white shadow-sm mb-3 samuraitravel-btn">登録</a>
 						</div>
 
-						<!-- ここから下は既存のコード -->
+						<!-- ここから下は以前作ったアプリのコード -->
 						<p id="count" class="count">3</p>
 						<div id="wrap" class="wrap">
 							<span id="typed" class="typed"></span><span id="untyped">なぜ入力されない？</span>
@@ -51,12 +51,15 @@
 
 						<script type="text/javascript" src="main.js"></script>
 </body>
-</main>
+
 
 <!-- フッター -->
 <div th:replace="~{fragment :: footer}"></div>
 
 <div th:replace="~{fragment :: scripts}"></div>
-</body>
+
+
+
+</main>
 
 </htmlhttp://localhost:8080/>

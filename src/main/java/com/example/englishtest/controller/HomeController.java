@@ -25,7 +25,7 @@ public class HomeController {
 	}
 	
 
-	@GetMapping("/another")
+	@GetMapping("/rangeselect")
 	public String rangeSelection(Model model, @RequestParam(name = "unit", required = false) String unit) {
 		List<Word> wordPage;
 
