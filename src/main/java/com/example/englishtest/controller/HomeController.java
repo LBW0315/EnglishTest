@@ -23,12 +23,12 @@ public class HomeController {
 		return "index";
 	}
 	
-@GetMapping
+@GetMapping("/")
 public String index2(Model model, @RequestParam(name = "unit", required = false)String unit) {
 	List<Word> wordPage;
 	
 	if (unit != null && !unit.isEmpty()) {
-        wordPage = wordRepository.findByNameLike("%" + unit + "%");                
+        wordPage = wordRepository.findByUnitLike("%" + unit + "%");                
     } else {
         wordPage = wordRepository.findAll();
     } 
