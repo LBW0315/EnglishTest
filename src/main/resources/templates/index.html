@@ -29,18 +29,15 @@
 								<div class="input-group">
 									<!-- ドロップダウンメニューを追加 -->
 									<select class="form-control" name="unit" th:value="${unit}">
-										<option th:value="${unit}" selected>U1</option>
-										<option th:value="${unit}" selected>U2</option>
-										<option th:value="${unit}" selected>U3</option>
+										<option th:value="unit" >U1</option>
+										<option th:value="unit" >U2</option>
+										<option th:value="unit" >U3</option>
 										<!-- 他の検索オプションを追加 -->
 									</select>
-									<input type="text" class="form-control" name="unit" th:value="${unit}"
-										placeholder="検索キーワード">
-									<button type="submit" class="btn text-white shadow-sm engleagu-btn">検索</button>
+									
 								</div>
 							</form>
-							<a href="#" class="btn text-white shadow-sm mb-3 samuraitravel-btn">登録</a>
-						</div>
+							
 
 
 						
@@ -58,7 +55,7 @@
 
 </body>
 <body>
-	<!-- 検索ができているか検証 -->
+	<!-- 検索ができているか検証したいだけのもの -->
 						<table class="table">
 							<thead>
 								<tr>
