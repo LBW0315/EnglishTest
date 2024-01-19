@@ -42,24 +42,53 @@
 							<a href="#" class="btn text-white shadow-sm mb-3 samuraitravel-btn">登録</a>
 						</div>
 
-						<!-- ここから下は以前作ったアプリのコード -->
+
+						
+
+
+
+
+						<!-- ここから下は既存のコード -->
 						<p id="count" class="count">3</p>
 						<div id="wrap" class="wrap">
 							<span id="typed" class="typed"></span><span id="untyped">なぜ入力されない？</span>
 						</div>
 						<button id="start">スタート</button>
 
-						<script type="text/javascript" src="main.js"></script>
+
+</body>
+<body>
+	<!-- 検索ができているか検証 -->
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">ID</th>
+									<th scope="col">英単語</th>
+									<th scope="col">習う学年</th>
+									<th scope="col">Unit</th>
+									<th scope="col">意味</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="word : ${wordPage}">
+									<td th:text="${word.getId()}"></td>
+									<td th:text="${word.getWord()}"></td>
+									<td th:text="${word.getSchoolyear()}"></td>
+									<td th:text="${word.getUnit()}"></td>
+									<td th:text="${word.getMean()}"></td>
+								</tr>
+							</tbody>
+						</table>
+	
 </body>
 
+</main>
 
 <!-- フッター -->
 <div th:replace="~{fragment :: footer}"></div>
 
 <div th:replace="~{fragment :: scripts}"></div>
+</body>
 
-
-
-</main>
-
-</htmlhttp://localhost:8080/>
+</html>
+<http: //localhost:8080 />

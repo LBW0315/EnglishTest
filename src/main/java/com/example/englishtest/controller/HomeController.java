@@ -18,14 +18,14 @@ public class HomeController {
 		this.wordRepository = wordRepository;
 	}
 
+	/**
+		@GetMapping("/")
+		public String index() {
+			return "index";
+		}
+		*/
 
 	@GetMapping("/")
-	public String index() {
-		return "index";
-	}
-	
-
-	@GetMapping("/rangeselect")
 	public String rangeSelection(Model model, @RequestParam(name = "unit", required = false) String unit) {
 		List<Word> wordPage;
 

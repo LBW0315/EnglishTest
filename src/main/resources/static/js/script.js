@@ -11,8 +11,16 @@ const start = document.getElementById("start");
 const count = document.getElementById("count");
 
 // 複数のテキストを格納する配列
-//  JPAインターフェースを継承してMySQLから取得したデータを渡したい！（オリジナルアプリ）
 const textLists = ["Hello World", "This is my App", "How are you?"];
+
+//JPAインターフェースを継承してMySQLから取得したデータを渡したい！（オリジナルアプリ）
+//const wordPage = /*[[${wordPage}]]*/"wordPage";
+/*console.log(wordPage);
+wordPage.content.map((page) => {
+	console.log(page.word);
+})
+*/
+
 
 const createText = () => {
   // 正タイプした文字列をクリア
