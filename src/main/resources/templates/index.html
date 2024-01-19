@@ -8,75 +8,85 @@
 
 	<link th:href="@{/css/style.css}" rel="stylesheet" />
 
-	<title>英単語一覧</title>
+	<title>FirstEnglish</title>
 </head>
 
 <body>
-	<div class="engleague-wrapper">
-		<!-- ヘッダー -->
-		<div th:replace="~{fragment :: header}"></div>
 
-		<main>
-			<div class="container pt-4 pb-5 samuraitravel-container">
-				<div class="row justify-content-center">
-					<div class="col-xxl-9 col-xl-10 col-lg-11">
-						<h1 class="mb-4 text-center">英単語一覧</h1>
+	<!-- ヘッダー -->
+	<div th:replace="~{fragment :: header}"></div>
 
+	<main>
+		<div class="container pt-4 pb-2">
+			<h1 class=" mb-text-center">FirstEnglish</h1>
+		</div>
 
-						<!-- この下を選択式にして検索できるようにしたい。 -->
-						<div class="d-flex justify-content-between align-items-end flex-wrap">
-							<form method="get" th:action="@{/rangeselect}" class="mb-3">
-								<div class="input-group">
-									<!-- ドロップダウンメニューを追加 -->
-									<select class="form-control" name="unit" th:value="${unit}">
-										<option th:value="unit" >U1</option>
-										<option th:value="unit" >U2</option>
-										<option th:value="unit" >U3</option>
-										<!-- 他の検索オプションを追加 -->
-									</select>
-									
-								</div>
-							</form>
-							
+		<!-- この下を選択式にして検索できるようにしたい。 -->
+		<div class="d-flex justify-content-between align-items-end flex-wrap">
+			<form method="get" th:action="@{/rangeselect}" class="mb-3">
+				<div class="input-group">
+					<!-- ドロップダウンメニューを追加 -->
+					<select class="form-control" name="unit" th:value="${unit}">
+						<option th:value="unit">U1</option>
+						<option th:value="unit">U2</option>
+						<option th:value="unit">U3</option>
+						<!-- 他の検索オプションを追加 -->
+					</select>
 
-
-						
+				</div>
+			</form>
+		</div>
 
 
 
 
-						<!-- ここから下は既存のコード -->
-						<p id="count" class="count">3</p>
-						<div id="wrap" class="wrap">
-							<span id="typed" class="typed"></span><span id="untyped">なぜ入力されない？</span>
-						</div>
-						<button id="start">スタート</button>
+
+
+
+
+		<!-- ここから下は既存のコード -->
+		<div class="d-flex justify-content-center">
+			<p id="count" class="count">10</p>
+		</div>
+
+		<div id="wrap" class="wrap">
+			<span id="typed" class="typed text-info font-weight-bold"></span><span id="untyped"
+				class="text-secondary">なぜ入力されない？</span>
+		</div>
+
+		<div class="d-flex justify-content-center">
+			<button id="start" class="btn btn-danger" btn-lg>スタート</button>
+		</div>
+
 
 
 </body>
+
 <body>
 	<!-- 検索ができているか検証したいだけのもの -->
-						<table class="table">
-							<thead>
-								<tr>
-									<th scope="col">ID</th>
-									<th scope="col">英単語</th>
-									<th scope="col">習う学年</th>
-									<th scope="col">Unit</th>
-									<th scope="col">意味</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr th:each="word : ${wordPage}">
-									<td th:text="${word.getId()}"></td>
-									<td th:text="${word.getWord()}"></td>
-									<td th:text="${word.getSchoolyear()}"></td>
-									<td th:text="${word.getUnit()}"></td>
-									<td th:text="${word.getMean()}"></td>
-								</tr>
-							</tbody>
-						</table>
-	
+	<div class="d-flex justify-content-center">
+		<table class="small-table">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">英単語</th>
+					<th scope="col">習う学年</th>
+					<th scope="col">Unit</th>
+					<th scope="col">意味</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="word : ${wordPage}">
+					<td th:text="${word.getId()}"></td>
+					<td th:text="${word.getWord()}"></td>
+					<td th:text="${word.getSchoolyear()}"></td>
+					<td th:text="${word.getUnit()}"></td>
+					<td th:text="${word.getMean()}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
 </body>
 
 </main>

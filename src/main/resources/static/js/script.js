@@ -43,7 +43,7 @@ const keyPress = (e) => {
     wrap.classList.add("mistyped");
     setTimeout(() => {
       wrap.classList.remove("mistyped");
-    }, 100);
+    }, 200);
     return;
   }
   //正タイプの場合

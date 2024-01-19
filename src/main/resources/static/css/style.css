@@ -28,3 +28,12 @@ body {
 .mistyped {
   background-color: red;
 }
+
+  .small-table {
+       font-size: 0.8em; /* フォントサイズを小さく */
+       width: 80%; /* テーブルの幅を縮小 */
+   }
+
+   .small-table th, .small-table td {
+       padding: 5px; /* セルのパディングを減らす */
+   }
