@@ -26,15 +26,18 @@ public class HomeController {
 		*/
 
 	@GetMapping("/")
-	public String rangeSelection(Model model, @RequestParam(name = "unit", required = false) String unit) {
+	public String rangeSelection(Model model, @RequestParam(name = "schoolyear", required = false) int schoolyear,
+			@RequestParam(name = "unit", required = false) String unit) {
 		List<Word> wordPage;
 
-		if (unit != null && !unit.isEmpty()) {
-			wordPage = wordRepository.findByUnitLike("%" + unit + "%");
+		//unitとschoolyearの両方をif文の条件に入れるには？
+		if (unit != null && !unit.isEmpty() && schoolyear != null && !schoolyear.isEmpty()) {
+			wordPage = wordRepository.findBySchoolyearAndUnit(schoolyear, unit);
 		} else {
 			wordPage = wordRepository.findAll();
 		}
 		model.addAttribute("unit", unit);
+		model.addAttribute("schoolyear", schoolyear);
 
 		return "index";
 	}
