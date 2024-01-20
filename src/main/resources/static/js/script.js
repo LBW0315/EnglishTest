@@ -30,7 +30,7 @@ const createText = () => {
   // 配列のインデックス数からランダムな数値を生成する
   let random = Math.floor(Math.random() * wordPage.length);
 
-  untyped = wordPage[random];
+  untyped = wordPage[random].mean;
   untypedfield.textContent = untyped;
 };
 

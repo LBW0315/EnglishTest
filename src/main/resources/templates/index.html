@@ -116,11 +116,14 @@
     //以下のコードはタイムリーフのメソッドでJavaのデータをjavascriptに変換している。
 /* <![CDATA[ */ 
 const wordPage = /*[[${wordPage}]]*/ 'wordPage';
-console.log(wordPage);
+console.log(wordPage[1].mean);
 wordPage.content.map((page) => {
 	console.log(page.word);
 })
 /* ]]> */ 
+
+//const wordArray = wordPage.content.map((page) => page.word))みたいなイメージで出力するまで！
+
 </script>
 
 
