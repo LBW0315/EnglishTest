@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "word")
+@Table(name = "words")
 @Data
 public class Word {
 	@Id
@@ -21,7 +21,7 @@ public class Word {
 	private String word;
 	
 	@Column(name = "schoolyear")
-	private int schoolyear;
+	private Integer schoolyear;
 	
 	@Column(name = "unit")
 	private String unit;

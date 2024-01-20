@@ -11,15 +11,13 @@ const start = document.getElementById("start");
 const count = document.getElementById("count");
 
 // 複数のテキストを格納する配列
-const textLists = ["Hello World", "This is my App", "How are you?"];
+//const wordPage = ["Hello World", "This is my App", "How are you?"];
 
-//JPAインターフェースを継承してMySQLから取得したデータを渡したい！（オリジナルアプリ）
-//const wordPage = /*[[${wordPage}]]*/"wordPage";
-/*console.log(wordPage);
-wordPage.content.map((page) => {
-	console.log(page.word);
-})
-*/
+
+
+
+
+
 
 
 const createText = () => {
@@ -30,9 +28,9 @@ const createText = () => {
   typedfield.textContent = typed;
 
   // 配列のインデックス数からランダムな数値を生成する
-  let random = Math.floor(Math.random() * textLists.length);
+  let random = Math.floor(Math.random() * wordPage.length);
 
-  untyped = textLists[random];
+  untyped = wordPage[random];
   untypedfield.textContent = untyped;
 };
 

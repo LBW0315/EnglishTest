@@ -58,7 +58,7 @@
 
 		<div id="wrap" class="wrap">
 			<span id="typed" class="typed text-info font-weight-bold"></span><span id="untyped"
-				class="text-secondary">なぜ入力されない？</span>
+				class="text-Light">なぜ入力されない？</span>
 		</div>
 
 
@@ -109,6 +109,21 @@
 <div th:replace="~{fragment :: footer}"></div>
 
 <div th:replace="~{fragment :: scripts}"></div>
+
+<script th:inline="javascript">
+	
+    //JPAインターフェースを継承してMySQLから取得したデータを渡したい！（オリジナルアプリ）
+    //以下のコードはタイムリーフのメソッドでJavaのデータをjavascriptに変換している。
+/* <![CDATA[ */ 
+const wordPage = /*[[${wordPage}]]*/ 'wordPage';
+console.log(wordPage);
+wordPage.content.map((page) => {
+	console.log(page.word);
+})
+/* ]]> */ 
+</script>
+
+
 </body>
 
 </html>
