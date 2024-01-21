@@ -33,11 +33,12 @@
     					<option value="3" th:selected="${schoolyear == 3}">3</option>
 					</select>
 					<!-- 他の検索オプションを追加 -->
-					<select class="form-control-lg " name="unit" th:value="${unit}">
+					<select class="form-control-lg " name="unit" >
 						<option selected>教科書の範囲を選んでください。</option>
-						<option value="U1-1">Unit1だよーん</option>
-						<option value="unit">U2</option>
-						<option value="unit">U3</option>
+						<option value="U1-1" th:selected="${unit == 'U1-1'}">Unit1-1</option>
+   						 <option value="U1-2" th:selected="${unit == 'U1-2'}">Unit1-2</option>
+    					<option value="U1-3" th:selected="${unit == 'U1-3'}">Unit1-3</option>
+						
 					</select>
 					<!-- 選択完了ボタンを追加 -->
             <button type="submit" class="btn btn-primary">選択完了</button>
