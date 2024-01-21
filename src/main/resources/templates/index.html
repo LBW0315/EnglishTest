@@ -27,17 +27,17 @@
 				<div class="input-group">
 					<!-- ドロップダウンメニューを追加 -->
 					<select class="form-control-lg " name="schoolyear">
-				<option selected>学年を選んでください</option>
+						<option selected>学年を選んでください</option>
 						<option value="1" th:selected="${schoolyear == 1}">1</option>
-   						 <option value="2" th:selected="${schoolyear == 2}">2</option>
+   						<option value="2" th:selected="${schoolyear == 2}">2</option>
     					<option value="3" th:selected="${schoolyear == 3}">3</option>
 					</select>
 					<!-- 他の検索オプションを追加 -->
 					<select class="form-control-lg " name="unit" >
 						<option selected>教科書の範囲を選んでください。</option>
 						<option value="U1-1" th:selected="${unit == 'U1-1'}">Unit1-1</option>
-   						 <option value="U1-2" th:selected="${unit == 'U1-2'}">Unit1-2</option>
-    					<option value="U1-3" th:selected="${unit == 'U1-3'}">Unit1-3</option>
+  						<option value="U1-2" th:selected="${unit == 'U1-2'}">Unit1-2</option>
+  						<option value="U1-3" th:selected="${unit == 'U1-3'}">Unit1-3</option>
 						
 					</select>
 					<!-- 選択完了ボタンを追加 -->
@@ -49,55 +49,47 @@
 
 
 
-
-
-
-
-
 		<!-- ここから下は既存のコード -->
 		<div class="d-flex justify-content-center">
-			<p id="count" class="count">2</p>
+			<p id="count" class="count">10</p>
 		</div>
 
 		<div id="wrap" class="wrap">
-			<span id="typed" class="typed text-info font-weight-bold"></span><span id="untyped"
-				class="text-Light">javascriptでエラーでも出たかな？</span>
+			<span id="typed" class="typed text-info font-weight-bold"></span>
+			<span id="question" class="text-Light">javascriptでエラーでも出たかな？</span>
 		</div>
 
 
 		<!-- スタートボタンを押したら出現するようにしたい　-->
 		<div class="d-flex justify-content-center">
-			<p id="typed" class="count"></p>
+			<span id="typed" class="typed text-info font-weight-bold"></span>
+			<span id="question" class="text-Light">解答欄</span>
 		</div>
 
 
 		<div class="d-flex pt-5 justify-content-center">
 			<button id="start" class="btn btn-danger" btn-lg>スタート</button>
 		</div>
+		
+		<!-- 解答ボタンスタートの後に出現するようにしたい　-->
+		<div class="d-flex pt-5 justify-content-center">
+			<button id="start" class="btn btn-danger" btn-lg>解答ボタン</button>
+		</div>
 
 
 
-</body>
-
-<body>
 	<!-- 検索ができているか検証したいだけのもの -->
-	<div class="d-flex justify-content-center">
-		<table class="small-table">
+	<div class="d-flex justify-content-center ">
+		<table class="small-table table table-borderred">
 			<thead>
 				<tr>
-					<th scope="col">ID</th>
 					<th scope="col">英単語</th>
-					<th scope="col">習う学年</th>
-					<th scope="col">Unit</th>
 					<th scope="col">意味</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:each="word : ${wordPage}">
-					<td th:text="${word.getId()}"></td>
 					<td th:text="${word.getWord()}"></td>
-					<td th:text="${word.getSchoolyear()}"></td>
-					<td th:text="${word.getUnit()}"></td>
 					<td th:text="${word.getMean()}"></td>
 				</tr>
 			</tbody>

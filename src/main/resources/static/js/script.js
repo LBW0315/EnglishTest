@@ -1,10 +1,14 @@
 // 変数の初期化
-let untyped = "";
-let typed = "";
-let score = 0;
+let question = ""; //問題（日本語）
+let answer = ""; //答え（英単語）
+let typed = ""; //答案（入力したもの）
+let questioncount = 0; //問題数
+let score = 0; //正当数
 
 // 必要なHTML要素の取得
-const untypedfield = document.getElementById("untyped");
+//questionと
+//typedのそれぞれの役割を分析
+const questionfield = document.getElementById("question");
 const typedfield = document.getElementById("typed");
 const wrap = document.getElementById("wrap");
 const start = document.getElementById("start");
@@ -30,14 +34,15 @@ const createText = () => {
 	// 配列のインデックス数からランダムな数値を生成する
 	let random = Math.floor(Math.random() * wordPage.length);
 
-	untyped = wordPage[random].mean;
-	untypedfield.textContent = untyped;
+//questionに意味（日本語）を代入している
+	question = wordPage[random].mean;
+	questionfield.textContent = question;
 };
 
 // キー入力の判定
 const keyPress = (e) => {
 	// 誤タイプの場合
-	if (e.key !== untyped.substring(0, 1)) {
+	if (e.key !== question.substring(0, 1)) {
 		wrap.classList.add("mistyped");
 		setTimeout(() => {
 			wrap.classList.remove("mistyped");
@@ -46,18 +51,18 @@ const keyPress = (e) => {
 	}
 	//正タイプの場合
 	wrap.classList.remove("mistyped");
-	typed += untyped.substring(0, 1);
-	untyped = untyped.substring(1);
+	typed += question.substring(0, 1);
+	question = question.substring(1);
 	typedfield.textContent = typed;
-	untypedfield.textContent = untyped;
+	questionfield.textContent = question;
 
 	//入力確認
 	console.log(e.key);
 	console.log(typed);
-	console.log(untyped);
+	console.log(question);
 
 	// テキストがなくなったら新しいテキストを表示
-	if (untyped === "") {
+	if (question === "") {
 		createText();
 	}
 };
@@ -112,4 +117,4 @@ start.addEventListener("click", () => {
 });
 
 //スタートボタンを押していない時のテキスト
-untypedfield.textContent = "スタートボタンで開始";
+questionfield.textContent = "スタートボタンで開始";
