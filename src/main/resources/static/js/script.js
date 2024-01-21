@@ -40,6 +40,8 @@ const createText = () => {
 	answer = wordPage[random].word;
 	console.log(answer);
 };
+
+
 const challengeOneMore = () => {
 	//解答をリセット
 	typed = "";
@@ -48,28 +50,12 @@ const challengeOneMore = () => {
 
 // キー入力の判定
 const keyPress = (e) => {
-	// 誤タイプの場合
-	if (e.key !== question.substring(0, 1)) {
-		wrap.classList.add("mistyped");
-		setTimeout(() => {
-			wrap.classList.remove("mistyped");
-		}, 200);
-		return;
-	}
-	//正タイプの場合
-	wrap.classList.remove("mistyped");
+	const key = e.key;
+	typed += key;
 	typedfield.textContent = typed;
-	questionfield.textContent = question;
-
-	//入力確認
+	
 	console.log(e.key);
-	console.log(typed);
-	console.log(question);
-
-	// テキストがなくなったら新しいテキストを表示
-	if (question === "") {
-		createText();
-	}
+	console.log(key);
 };
 
 
@@ -140,9 +126,11 @@ start.addEventListener("click", () => {
 
 	//スタートボタンを非表示にする
 	start.style.display = "none";
-
+	
+	document.addEventListener("keypress", keyPress);
+	
 	//クリックのイベント処理(解答ボタンを押したらscoringメソッドを開始する)
-	challenge.document.addEventListener("click", scoring());
+	challenge.addEventListener("click", scoring);
 });
 
 //スタートボタンを押していない時のテキスト
