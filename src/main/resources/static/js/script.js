@@ -3,41 +3,48 @@ let question = ""; //問題（日本語）
 let answer = ""; //答え（英単語）
 let typed = ""; //答案（入力したもの）
 let questioncount = 0; //問題数
-let score = 0; //正当数
+let clear = 0; //正当数
 
 // 必要なHTML要素の取得
 //questionと
 //typedのそれぞれの役割を分析
 const questionfield = document.getElementById("question");
 const typedfield = document.getElementById("typed");
+
 const wrap = document.getElementById("wrap");
 const start = document.getElementById("start");
 const count = document.getElementById("count");
+const challenge = document.getElementById("challenge");
+
 
 // 複数のテキストを格納する配列
 //const wordPage = ["Hello World", "This is my App", "How are you?"];
 
-
-
-
-
-
-
-
 const createText = () => {
-	// 正タイプした文字列をクリア
-	//スコアのインクリメント
-	score++;
+
+	//問題数のインクリメント
+	questioncount++;
+
+	//解答をリセット
 	typed = "";
 	typedfield.textContent = typed;
 
 	// 配列のインデックス数からランダムな数値を生成する
 	let random = Math.floor(Math.random() * wordPage.length);
 
-//questionに意味（日本語）を代入している
+	//questionに意味（日本語）を代入している
 	question = wordPage[random].mean;
+	console.log(question);
 	questionfield.textContent = question;
+	//answerに答え（英単語）を代入している
+	answer = wordPage[random].word;
+	console.log(answer);
 };
+const challengeOneMore = () => {
+	//解答をリセット
+	typed = "";
+	typedfield.textContent = typed;
+}
 
 // キー入力の判定
 const keyPress = (e) => {
@@ -51,8 +58,6 @@ const keyPress = (e) => {
 	}
 	//正タイプの場合
 	wrap.classList.remove("mistyped");
-	typed += question.substring(0, 1);
-	question = question.substring(1);
 	typedfield.textContent = typed;
 	questionfield.textContent = question;
 
@@ -67,17 +72,40 @@ const keyPress = (e) => {
 	}
 };
 
+
+
+//答え合わせ（答え合わせボタンを押したら）
+const scoring = () => {
+	//間違っていた場合
+	if (typed !== answer) {
+		//赤くなって0.2秒で消える
+		wrap.classList.add("mistyped");
+		setTimeout(() => {
+			wrap.classList.remove("mistyped");
+		}, 200);
+		//解答欄をリセットする
+		challengeOneMore();
+
+		return;
+	}
+	//正しい場合
+	//新しい問題を作る
+	createText();
+	//正解数を足す
+	clear++;
+}
+
 // タイピングスキルのランクを判定
-const rankCheck = (score) => {
+const rankCheck = (clear) => {
 	// テストの結果を返す
-	return `${score}文字打てました\n【OK】ボタンでもう一度チャレンジ`;
+	return `${questioncount}問中${clear}問解けましたね！\n【OK】ボタンでもう一度チャレンジ`;
 };
 
 // ゲームを終了
 const gameOver = (id) => {
 	clearInterval(id);
 
-	const result = confirm(rankCheck(score));
+	const result = confirm(rankCheck(clear));
 
 	//OKボタンをクリックされたらリロードする
 	window.location.reload();
@@ -101,6 +129,7 @@ const timer = () => {
 	}, 1000);
 };
 
+
 //スタートボタンを押してゲームをスタートした後の処理
 start.addEventListener("click", () => {
 	//ランダムなテキストを表示する
@@ -112,8 +141,8 @@ start.addEventListener("click", () => {
 	//スタートボタンを非表示にする
 	start.style.display = "none";
 
-	//キーボードのイベント処理(キーボード押したらkeyPressメソッドを開始しますよ)
-	document.addEventListener("keypress", keyPress);
+	//クリックのイベント処理(解答ボタンを押したらscoringメソッドを開始する)
+	challenge.document.addEventListener("click", scoring());
 });
 
 //スタートボタンを押していない時のテキスト

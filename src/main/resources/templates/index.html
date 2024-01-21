@@ -59,11 +59,11 @@
 			<span id="question" class="text-Light">javascriptでエラーでも出たかな？</span>
 		</div>
 
-
+		<!-- 解答欄　-->
 		<!-- スタートボタンを押したら出現するようにしたい　-->
 		<div class="d-flex justify-content-center">
 			<span id="typed" class="typed text-info font-weight-bold"></span>
-			<span id="question" class="text-Light">解答欄</span>
+			<span id="typed" class="text-Light">解答欄</span>
 		</div>
 
 
@@ -73,7 +73,7 @@
 		
 		<!-- 解答ボタンスタートの後に出現するようにしたい　-->
 		<div class="d-flex pt-5 justify-content-center">
-			<button id="start" class="btn btn-danger" btn-lg>解答ボタン</button>
+			<button id="challenge" class="btn btn-danger" btn-lg>解答ボタン</button>
 		</div>
 
 
@@ -112,12 +112,14 @@
 /* <![CDATA[ */ 
 const wordPage = /*[[${wordPage}]]*/ 'wordPage';
 console.log(wordPage[1].mean);
-wordPage.content.map((page) => {
-	console.log(page.word);
-})
 /* ]]> */ 
 
 //const wordArray = wordPage.content.map((page) => page.word))みたいなイメージで出力するまで！
+//wordPage.content.map((page) => {
+//	console.log(page.word);
+//})
+
+
 
 </script>
 
