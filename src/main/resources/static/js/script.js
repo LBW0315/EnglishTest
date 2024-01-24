@@ -15,6 +15,7 @@ const wrap = document.getElementById("wrap");
 const start = document.getElementById("start");
 const count = document.getElementById("count");
 const challenge = document.getElementById("challenge");
+const pass = document.getElementById("pass");
 
 
 // 複数のテキストを格納する配列
@@ -130,6 +131,7 @@ const timer = () => {
 start.addEventListener("click", () => {
 	//ランダムなテキストを表示する
 	createText();
+	
 
 	//カウントダウンタイマーを開始する
 	timer();
@@ -141,6 +143,8 @@ start.addEventListener("click", () => {
 
 	//クリックのイベント処理(解答ボタンを押したらscoringメソッドを開始する)
 	challenge.addEventListener("click", scoring);
+	
+	pass.addEventListener("click", createText);
 
 	//条件付きのキーボードイベントのリスナー追加
 	document.addEventListener('keydown', function(e) {
