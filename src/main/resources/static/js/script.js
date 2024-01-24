@@ -51,9 +51,12 @@ const challengeOneMore = () => {
 // キー入力の判定
 const keyPress = (e) => {
 	const key = e.key;
-	typed += key;
-	typedfield.textContent = typed;
-	
+	if (e.key !== 'Enter') {
+		typed += key;
+		typedfield.textContent = typed;
+	}
+
+
 	console.log(e.key);
 	console.log(key);
 };
@@ -126,17 +129,17 @@ start.addEventListener("click", () => {
 
 	//スタートボタンを非表示にする
 	start.style.display = "none";
-	
+
 	document.addEventListener("keypress", keyPress);
-	
+
 	//クリックのイベント処理(解答ボタンを押したらscoringメソッドを開始する)
 	challenge.addEventListener("click", scoring);
-	
+
 	//条件付きのキーボードイベントのリスナー追加
-	document.addEventListener('keydown', function(e){
+	document.addEventListener('keydown', function(e) {
 		//Enterキーを押すとscoringメソッドを開始する
-		if(e.key === 'Enter'){
-			scoring();			
+		if (e.key === 'Enter') {
+			scoring();
 		}
 	});
 });
