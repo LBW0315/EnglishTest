@@ -49,9 +49,16 @@ const challengeOneMore = () => {
 }
 
 // キー入力の判定
-const keyPress = (e) => {
+const keyDown = (e) => {
 	const key = e.key;
-	if (e.key !== 'Enter') {
+	if (e.key === 'Enter') {
+		//何もしない
+	}else if(e.key === 'Backspace'){
+		//文字を1つ消す
+		typed = typed.slice(0, -1);
+		typedfield.textContent = typed;
+	}else{
+		
 		typed += key;
 		typedfield.textContent = typed;
 	}
@@ -130,7 +137,7 @@ start.addEventListener("click", () => {
 	//スタートボタンを非表示にする
 	start.style.display = "none";
 
-	document.addEventListener("keypress", keyPress);
+	document.addEventListener("keydown", keyDown);
 
 	//クリックのイベント処理(解答ボタンを押したらscoringメソッドを開始する)
 	challenge.addEventListener("click", scoring);
