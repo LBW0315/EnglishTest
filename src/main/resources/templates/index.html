@@ -41,7 +41,7 @@
 						
 					</select>
 					<!-- 選択完了ボタンを追加 -->
-            <button type="submit" class="btn btn-primary">選択完了</button>
+            <button id ="select" type="submit" class="btn btn-primary">選択完了</button>
 
 				</div>
 			</form>
@@ -68,13 +68,13 @@
 
 
 		<div class="d-flex pt-5 justify-content-center">
-			<button id="start" class="btn btn-danger btn-lg" btn-lg>スタート</button>
+			<button id="start" class="btn btn-danger btn-lg">スタート</button>
 		</div>
 		
 		<!-- 解答ボタンスタートの後に出現するようにしたい　-->
 		<div class="d-flex pt-5 justify-content-center">
-			<button id="pass" class="btn btn-secondary btn-lg me-3">パス(escキー)</button>
-			<button id="challenge" class="btn btn-danger btn-lg">解答ボタン(Enterキー)</button>
+			<button id="pass" class="btn btn-secondary btn-lg me-3" style="display: none;">パス(escキー)</button>
+			<button id="challenge" class="btn btn-danger btn-lg" style="display: none;">解答ボタン(Enterキー)</button>
 		</div>
 		
 

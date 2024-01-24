@@ -12,6 +12,7 @@ const questionfield = document.getElementById("question");
 const typedfield = document.getElementById("typed");
 
 const wrap = document.getElementById("wrap");
+const select = document.getElementById("select");
 const start = document.getElementById("start");
 const count = document.getElementById("count");
 const challenge = document.getElementById("challenge");
@@ -20,6 +21,8 @@ const pass = document.getElementById("pass");
 
 // 複数のテキストを格納する配列
 //const wordPage = ["Hello World", "This is my App", "How are you?"];
+
+
 
 const createText = () => {
 
@@ -129,17 +132,28 @@ const timer = () => {
 };
 
 
+// 範囲選択をした後にスタートボタンを表示させる。
+select.addEventListener("click", () =>{
+	start.style.display = "flex";
+});
+
+
+
 //スタートボタンを押してゲームをスタートした後の処理
 start.addEventListener("click", () => {
+	
 	//ランダムなテキストを表示する
 	createText();
 	
-
 	//カウントダウンタイマーを開始する
 	timer();
 
 	//スタートボタンを非表示にする
 	start.style.display = "none";
+	
+	//パスボタンと解答ボタンを表示する(リタイアボタンもいずれ・・・)
+	challenge.style.display = "flex";
+	pass.style.display = "flex";
 
 	document.addEventListener("keydown", keyDown);
 
