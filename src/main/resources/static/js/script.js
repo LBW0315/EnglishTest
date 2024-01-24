@@ -60,7 +60,7 @@ const keyPress = (e) => {
 
 
 
-//答え合わせ（答え合わせボタンを押したら）
+//答え合わせ（答え合わせボタンを押したら）(Enterkeyを押したら)
 const scoring = () => {
 	//間違っていた場合
 	if (typed !== answer) {
@@ -131,6 +131,14 @@ start.addEventListener("click", () => {
 	
 	//クリックのイベント処理(解答ボタンを押したらscoringメソッドを開始する)
 	challenge.addEventListener("click", scoring);
+	
+	//条件付きのキーボードイベントのリスナー追加
+	document.addEventListener('keydown', function(e){
+		//Enterキーを押すとscoringメソッドを開始する
+		if(e.key === 'Enter'){
+			scoring();			
+		}
+	});
 });
 
 //スタートボタンを押していない時のテキスト
