@@ -58,6 +58,8 @@ const keyDown = (e) => {
 		//文字を1つ消す
 		typed = typed.slice(0, -1);
 		typedfield.textContent = typed;
+	}else if(e.key === 'Escape'){
+		//何もしない
 	}else{
 		
 		typed += key;
@@ -152,6 +154,11 @@ start.addEventListener("click", () => {
 		if (e.key === 'Enter') {
 			scoring();
 		}
+		
+		if(e.key === 'Escape'){
+			createText();
+		}
+		
 	});
 });
 
