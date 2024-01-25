@@ -1,5 +1,4 @@
 body {
-	font-size: 6em;
 	text-align: center;
 }
 
@@ -14,8 +13,6 @@ body {
 .wrap {
 	margin-top: 20px;
 	padding: 80px 40px;
-	font-weight: bold;
-	border-width: 1000px; /* ボーダーの太さを変更 */
 }
 
 /* 正しくタイプされた場合のテキスト */
