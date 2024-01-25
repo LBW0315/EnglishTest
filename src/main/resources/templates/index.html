@@ -68,12 +68,10 @@
   						<option value="U11-1" th:selected="${unit == 'U11-1'}">Unit11-1</option>
   						<option value="U11-2" th:selected="${unit == 'U11-2'}">Unit11-2</option>
   						<option value="U11-3" th:selected="${unit == 'U11-3'}">Unit11-3</option>
-  						
-  						
-  						
+ 
 					</select>
 					<!-- 選択完了ボタンを追加 -->
-            <button id ="select" type="submit" class="btn btn-primary">選択完了</button>
+           				 <button id ="select" type="submit" class="btn btn-primary">選択完了</button>
 
 				</div>
 			</form>
@@ -86,9 +84,8 @@
 			<p id="count" class="count">10</p>
 		</div>
 
-		<div id="wrap" class="wrap">
-			
-			<span id="question" class="text-Light">javascriptでエラーでも出たかな？</span>
+		<div id="wrap" class="wrap bg-success border border-warning">
+			<span id="question" class="text-light">javascriptでエラーでも出たかな？</span>
 		</div>
 
 		<!-- 解答欄　-->
@@ -100,7 +97,7 @@
 
 
 		<div class="d-flex pt-5 justify-content-center">
-			<button id="start" class="btn btn-danger btn-lg">スタート</button>
+			<button id="start" class="btn btn-warning btn-lg">スタート</button>
 		</div>
 		
 		<!-- 解答ボタンスタートの後に出現するようにしたい　-->

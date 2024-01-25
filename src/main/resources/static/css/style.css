@@ -1,39 +1,29 @@
 body {
-  font-size: 6em;
-  text-align: center;
+	font-size: 6em;
+	text-align: center;
 }
 
 /* ゲームの残り秒数が表示されるタイマーの領域 */
 .count {
-  margin: 0;
-  font-weight: bold;
-  color: #888;
+	margin: 0;
+	font-weight: bold;
+	color: #888;
 }
 
 /* テキストが表示される領域 */
 .wrap {
-  margin-top: 20px;
-  padding: 80px 40px;
-  background-color: #666;
-  font-weight: bold;
-  color: #fff;
+	margin-top: 20px;
+	padding: 80px 40px;
+	font-weight: bold;
+	border-width: 1000px; /* ボーダーの太さを変更 */
 }
 
 /* 正しくタイプされた場合のテキスト */
 .typed {
-  color: lightgreen;
+	color: lightgreen;
 }
 
 /* ミスタイプの場合の背景 */
 .mistyped {
-  background-color: red;
+	background-color: red;
 }
-
-  .small-table {
-       font-size: 0.5em; /* フォントサイズを小さく */
-       width: 80%; /* テーブルの幅を縮小 */
-   }
-
-   .small-table th, .small-table td {
-       padding: 5px; /* セルのパディングを減らす */
-   }
