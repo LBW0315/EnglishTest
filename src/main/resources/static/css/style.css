@@ -1,5 +1,7 @@
 body {
 	text-align: center;
+	font-family: 'BIZ UDGothic', sans-serif;
+	
 }
 
 /* ゲームの残り秒数が表示されるタイマーの領域 */
