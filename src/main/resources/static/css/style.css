@@ -11,14 +11,10 @@ body {
 
 /* テキストが表示される領域 */
 .wrap {
-	margin-top: 20px;
+	margin-top: 10px;
 	padding: 80px 40px;
 }
 
-/* 正しくタイプされた場合のテキスト */
-.typed {
-	color: lightgreen;
-}
 
 /* ミスタイプの場合の背景 */
 .mistyped {
