@@ -14,6 +14,7 @@ const typedfield = document.getElementById("typed");
 const wrap = document.getElementById("wrap");
 const select = document.getElementById("select");
 const start = document.getElementById("start");
+const countselect = document.getElementById("countselect");
 const count = document.getElementById("count");
 const challenge = document.getElementById("challenge");
 const pass = document.getElementById("pass");
@@ -113,6 +114,14 @@ const gameOver = (id) => {
 	window.location.reload();
 };
 
+// カウントダウンタイマーを作成
+const createCount = () => {
+		const selectedValue = countselect.value;
+		count.textContent = selectedValue;
+};
+
+
+
 // カウントダウンタイマー
 const timer = () => {
 	// タイマー部分のHTML要素（p要素）を取得する
@@ -139,11 +148,16 @@ select.addEventListener("click", () =>{
 
 
 
+
+
 //スタートボタンを押してゲームをスタートした後の処理
 start.addEventListener("click", () => {
 	
 	//ランダムなテキストを表示する
 	createText();
+	
+	//選択したカウントダウンの秒数を代入する(うまくいかない・・・)
+	createCount();
 	
 	//カウントダウンタイマーを開始する
 	timer();

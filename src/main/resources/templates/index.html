@@ -72,18 +72,26 @@
   						<option value="U11-3" th:selected="${unit == 'U11-3'}">Unit11-3</option>
  
 					</select>
+					
+					
 					<!-- 選択完了ボタンを追加 -->
            				 <button id ="select" type="submit" class="btn btn-primary">選択完了</button>
 
 				</div>
 			</form>
 		</div>
+					<select id="countselect" class="form-control-lg" name="countselect">
+						<option value="5" th:selected="${countselect == '5'}">5秒</option>
+						<option value="10" th:selected="${countselect == '10'}">10秒</option>
+						<option value="15" th:selected="${countselect == '15'}">15秒</option>
+						<option value="30" th:selected="${countselect == '30'}">30秒</option>
+						<option value="60" th:selected="${countselect == '60'}">1分</option>
+					</select>
 
 
-
-		<!-- ここから下は既存のコード -->
+		<!-- タイマー設定（セレクト） -->
 		<div class="d-flex justify-content-center">
-			<p id="count" class="h1 count">10</p>
+			<p id="count" class="h1 count">カウントダウン秒数がセレクトされる予定なんだけどな・・・</p>
 		</div>
 
 		<div id="wrap" class="wrap bg-success border border-warning">
