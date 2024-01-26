@@ -22,3 +22,8 @@ body {
 .mistyped {
 	background-color: red;
 }
+
+
+.hidden{
+	display : none;
+}

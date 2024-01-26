@@ -20,12 +20,12 @@
 
 	<main>
 		<div class="container pt-4 pb-2">
-			<h1 class="display-2 mb-text-center">First English</h1>
+			<h1 id = "title" class="display-2 mb-text-center">First English</h1>
 		</div>
 
 		<!-- この下を選択式にして検索できるようにしたい。 -->
 		<div class="d-flex justify-content-between align-items-end flex-wrap">
-			<form method="get" th:action="@{/rangeselect}" class="mb-3">
+			<form id = "range" method="get" th:action="@{/rangeselect}" class="mb-3">
 				<div class="input-group">
 					<!-- ドロップダウンメニューを追加 -->
 					<select class="form-control-lg " name="schoolyear">
@@ -81,17 +81,17 @@
 			</form>
 		</div>
 					<select id="countselect" class="form-control-lg" name="countselect">
-						<option value="5" th:selected="${countselect == '5'}">5秒</option>
-						<option value="10" th:selected="${countselect == '10'}">10秒</option>
-						<option value="15" th:selected="${countselect == '15'}">15秒</option>
-						<option value="30" th:selected="${countselect == '30'}">30秒</option>
-						<option value="60" th:selected="${countselect == '60'}">1分</option>
+						<option value="5" th:selected="${countselect == '5'}">5秒だけかよ・・・</option>
+						<option value="10" th:selected="${countselect == '10'}">10秒頑張る</option>
+						<option value="15" th:selected="${countselect == '15'}">15秒頑張る</option>
+						<option value="30" th:selected="${countselect == '30'}">30秒頑張る</option>
+						<option value="60" th:selected="${countselect == '60'}">1分頑張る</option>
 					</select>
 
 
 		<!-- タイマー設定（セレクト） -->
 		<div class="d-flex justify-content-center">
-			<p id="count" class="h1 count">カウントダウン秒数がセレクトされる予定なんだけどな・・・</p>
+			<p id="count" class="h1 count"></p>
 		</div>
 
 		<div id="wrap" class="wrap bg-success border border-warning">

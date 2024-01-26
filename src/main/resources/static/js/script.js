@@ -18,6 +18,7 @@ const countselect = document.getElementById("countselect");
 const count = document.getElementById("count");
 const challenge = document.getElementById("challenge");
 const pass = document.getElementById("pass");
+const range = document.getElementById("range");
 
 
 // 複数のテキストを格納する配列
@@ -58,14 +59,14 @@ const keyDown = (e) => {
 	const key = e.key;
 	if (e.key === 'Enter') {
 		//何もしない
-	}else if(e.key === 'Backspace'){
+	} else if (e.key === 'Backspace') {
 		//文字を1つ消す
 		typed = typed.slice(0, -1);
 		typedfield.textContent = typed;
-	}else if(e.key === 'Escape'){
+	} else if (e.key === 'Escape') {
 		//何もしない
-	}else{
-		
+	} else {
+
 		typed += key;
 		typedfield.textContent = typed;
 	}
@@ -116,8 +117,8 @@ const gameOver = (id) => {
 
 // カウントダウンタイマーを作成
 const createCount = () => {
-		const selectedValue = countselect.value;
-		count.textContent = selectedValue;
+	const selectedValue = countselect.value;
+	count.textContent = selectedValue;
 };
 
 
@@ -141,10 +142,12 @@ const timer = () => {
 };
 
 
-// 範囲選択をした後にスタートボタンを表示させる。
-select.addEventListener("click", () =>{
-	start.style.display = "flex";
-});
+
+
+
+
+
+
 
 
 
@@ -152,19 +155,26 @@ select.addEventListener("click", () =>{
 
 //スタートボタンを押してゲームをスタートした後の処理
 start.addEventListener("click", () => {
-	
+
 	//ランダムなテキストを表示する
 	createText();
-	
+
 	//選択したカウントダウンの秒数を代入する(うまくいかない・・・)
 	createCount();
-	
+
 	//カウントダウンタイマーを開始する
 	timer();
 
+	//余分なものを消します
 	//スタートボタンを非表示にする
-	start.style.display = "none";
+	//選択範囲
+	//題名
+	start.classList.add('hidden');
+	title.classList.add('hidden');
+	countselect.classList.add('hidden');
+	range.classList.add('hidden');
 	
+
 	//パスボタンと解答ボタンを表示する(リタイアボタンもいずれ・・・)
 	challenge.style.display = "flex";
 	pass.style.display = "flex";
@@ -173,7 +183,7 @@ start.addEventListener("click", () => {
 
 	//クリックのイベント処理(解答ボタンを押したらscoringメソッドを開始する)
 	challenge.addEventListener("click", scoring);
-	
+
 	pass.addEventListener("click", createText);
 
 	//条件付きのキーボードイベントのリスナー追加
@@ -182,13 +192,13 @@ start.addEventListener("click", () => {
 		if (e.key === 'Enter') {
 			scoring();
 		}
-		
-		if(e.key === 'Escape'){
+
+		if (e.key === 'Escape') {
 			createText();
 		}
-		
+
 	});
 });
 
 //スタートボタンを押していない時のテキスト
-questionfield.textContent = "スタートボタンで開始";
+questionfield.innerHTML = "①学年と範囲を選びます！<br>②選択完了を押します！<br>③頑張る時間を選びます！";
