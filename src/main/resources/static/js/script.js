@@ -77,6 +77,12 @@ const keyDown = (e) => {
 	console.log(key);
 };
 
+// カンニングボタンに機能（入力しているものを空にして答えを挿入する）
+const kanning = () =>{
+	typedfield.textContent = "";
+	typedfield.textContent = answer;
+}
+
 
 
 //答え合わせ（答え合わせボタンを押したら）(Enterkeyを押したら)
@@ -186,8 +192,12 @@ start.addEventListener("click", () => {
 
 	//クリックのイベント処理(解答ボタンを押したらscoringメソッドを開始する)
 	challenge.addEventListener("click", scoring);
-
+	
+	//クリックのイベント処理（パスボタンを押したら）
 	pass.addEventListener("click", createText);
+	
+	//クリックのイベント処理（カンニングボタンを押したら）
+	cheat.addEventListener("click", kanning);
 
 	//条件付きのキーボードイベントのリスナー追加
 	document.addEventListener('keydown', function(e) {
