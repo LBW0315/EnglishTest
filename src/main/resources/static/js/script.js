@@ -19,6 +19,7 @@ const count = document.getElementById("count");
 const challenge = document.getElementById("challenge");
 const pass = document.getElementById("pass");
 const range = document.getElementById("range");
+const cheat = document.getElementById("cheat");
 
 
 // 複数のテキストを格納する配列
@@ -173,10 +174,12 @@ start.addEventListener("click", () => {
 	title.classList.add('hidden');
 	countselect.classList.add('hidden');
 	range.classList.add('hidden');
-	
 
-	//パスボタンと解答ボタンを表示する(リタイアボタンもいずれ・・・)
+
+
+	//パスボタン、カンニングボタン、解答ボタンを表示する(リタイアボタンもいずれ・・・)
 	challenge.style.display = "flex";
+	cheat.style.display = "flex";
 	pass.style.display = "flex";
 
 	document.addEventListener("keydown", keyDown);
