@@ -66,11 +66,46 @@ const keyDown = (e) => {
 		typedfield.textContent = typed;
 	} else if (e.key === 'Escape') {
 		//何もしない
-	} else {
+	} else if(e.key === 'Control'){
+		
+	}else if(e.key === 'Shift'){
+		
+	}else if(e.key === 'Alt'){
+		
+	}else if(e.key === 'Eisu'){
+		
+	}else if(e.key === 'F1'){
+		
+	}else if(e.key === 'Tab'){
+		
+	}else if(e.key === 'ArrowDown'){
+		
+	}else if(e.key === 'ArrowUp'){
+		
+	}else if(e.key === 'ArrowRight'){
+		
+	}else if(e.key === 'ArrowLeft'){
+		
+	}else if(e.key === 'Delete'){
+		
+	}else if(e.key === 'End'){
+		
+	}else if(e.key === 'Home'){
+		
+	}else if(e.key === 'PageUp'){
+		
+	}else if(e.key === 'PageDown'){
+		
+	}else if(e.key === 'Clear'){
+		
+	}else {
 
 		typed += key;
 		typedfield.textContent = typed;
 	}
+	
+	
+	
 
 
 	console.log(e.key);
@@ -78,7 +113,7 @@ const keyDown = (e) => {
 };
 
 // カンニングボタンに機能（入力しているものを空にして答えを挿入する）
-const kanning = () =>{
+const kanning = () => {
 	typedfield.textContent = "";
 	typedfield.textContent = answer;
 }
@@ -192,10 +227,10 @@ start.addEventListener("click", () => {
 
 	//クリックのイベント処理(解答ボタンを押したらscoringメソッドを開始する)
 	challenge.addEventListener("click", scoring);
-	
+
 	//クリックのイベント処理（パスボタンを押したら）
 	pass.addEventListener("click", createText);
-	
+
 	//クリックのイベント処理（カンニングボタンを押したら）
 	cheat.addEventListener("click", kanning);
 
@@ -208,6 +243,11 @@ start.addEventListener("click", () => {
 
 		if (e.key === 'Escape') {
 			createText();
+		}
+
+		if (e.key === ' ') {
+			kanning();
+			
 		}
 
 	});
