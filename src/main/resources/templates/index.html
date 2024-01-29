@@ -73,13 +73,6 @@
  
 					</select>
 					
-					
-					<!-- 選択完了ボタンを追加 -->
-           				 <button id ="select" type="submit" class="btn btn-primary">選択完了</button>
-
-				</div>
-			</form>
-		</div>
 					<select id="countselect" class="form-control-lg" name="countselect">
 						<option value="5" th:selected="${countselect == '5'}">5秒だけかよ・・・</option>
 						<option value="10" th:selected="${countselect == '10'}">10秒頑張る</option>
@@ -87,6 +80,13 @@
 						<option value="30" th:selected="${countselect == '30'}">30秒頑張る</option>
 						<option value="60" th:selected="${countselect == '60'}">1分頑張る</option>
 					</select>
+					<!-- 選択完了ボタンを追加 -->
+           				 <button id ="select" type="submit" class="btn btn-primary">選択完了</button>
+
+				</div>
+			</form>
+		</div>
+					
 
 
 		<!-- タイマー設定（セレクト） -->
