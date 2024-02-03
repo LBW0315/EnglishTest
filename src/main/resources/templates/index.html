@@ -9,6 +9,25 @@
 
 	<link th:href="@{/css/style.css}" rel="stylesheet" />
 	
+	<script th:inline="javascript">
+	
+    //JPAインターフェースを継承してMySQLから取得したデータを渡したい！（オリジナルアプリ）
+    //以下のコードはタイムリーフのメソッドでJavaのデータをjavascriptに変換している。
+
+const wordPage = /*[[${wordPage}]]*/ 'wordPage';
+console.log(wordPage[2].mean);
+
+
+
+//const wordArray = wordPage.content.map((page) => page.word))みたいなイメージで出力するまで！
+//wordPage.content.map((page) => {
+//	console.log(page.word);
+//})
+
+
+
+</script>
+
 
 	<title>FirstEnglish</title>
 </head>
@@ -22,20 +41,43 @@
 		<div class="container pt-4 pb-2">
 			<h1 id = "title" class="display-2 mb-text-center">First English</h1>
 		</div>
+		<p>aaaaaa</p>
+		<tr th:each="s1 : ${units}">
+							<p th:text="${s1}"></p>
+							<p>bbbbbbbbbbbbbb</p>
+						</tr>
 
 		<!-- この下を選択式にして検索できるようにしたい。 -->
 		<div class="d-flex justify-content-between align-items-end flex-wrap">
 			<form id = "range" method="get" th:action="@{/rangeselect}" class="mb-3">
 				<div class="input-group">
 					<!-- ドロップダウンメニューを追加 -->
-					<select class="form-control-lg " name="schoolyear">
+					<select id="schoolyear" onchange="getUnit()"  class="form-control-lg " name="schoolyear">
 						<option selected>学年を選んでください</option>
 						<option value="1" th:selected="${schoolyear == 1}">1年生</option>
    						<option value="2" th:selected="${schoolyear == 2}">2年生</option>
     					<option value="3" th:selected="${schoolyear == 3}">3年生</option>
 					</select>
+					
+					<th:block th:if="${schoolyear == 1}">
+							 <p>1よ</p>
+						<tr th:each="s1 : ${S1}">
+							<p th:text="${s1}"></p>
+						</tr>
+					</th:block>
+ 					<th:block th:if="${schoolyear == 2}">
+					     <p>2よ</p>
+					</th:block>
+					
+					
+					
 					<!-- 他の検索オプションを追加 -->
-					<select class="form-control-lg " name="unit" >
+					<select id="unitselect" class="form-control-lg " name="unit" >
+						<option selected>教科書の範囲を選んでください。</option>
+						<option th:if="${schoolyear ==1}" th:each="s1 : ${S1}" th:value="${s1}" th:selected="${s1 == unit}"  th:inline="text">[[${s1}]]</option>
+						<option th:if="${schoolyear ==2}" th:each="s2 : ${S2}" th:value="${s2}" th:selected="${s2 == unit}"  th:inline="text">[[${s1}]]</option>
+						<option th:if="${schoolyear ==3}" th:each="s3 : ${S3}" th:value="${s3}" th:selected="${s3 == unit}"  th:inline="text">[[${s1}]]</option>
+						
 						<option selected>教科書の範囲を選んでください。</option>
 						<option value="U1-1" th:selected="${unit == 'U1-1'}">Unit1-1</option>
   						<option value="U1-2" th:selected="${unit == 'U1-2'}">Unit1-2</option>
@@ -82,13 +124,19 @@
 					</select>
 					<!-- 選択完了ボタンを追加 -->
            				 <button id ="select" type="submit" class="btn btn-primary">選択完了</button>
+           				 
 
 				</div>
 			</form>
 		</div>
-					
-
-
+		
+		
+		<form action="/" method="get">
+  			<button class="btn btn-danger" type="submit">リセット</button>
+		</form>
+		
+		
+		
 		<!-- タイマー設定（セレクト） -->
 		<div class="d-flex justify-content-center">
 			<p id="count" class="h1 count"></p>
@@ -143,23 +191,6 @@
 
 <div th:replace="~{fragment :: scripts}"></div>
 
-<script th:inline="javascript">
-	
-    //JPAインターフェースを継承してMySQLから取得したデータを渡したい！（オリジナルアプリ）
-    //以下のコードはタイムリーフのメソッドでJavaのデータをjavascriptに変換している。
-/* <![CDATA[ */ 
-const wordPage = /*[[${wordPage}]]*/ 'wordPage';
-console.log(wordPage[2].mean);
-/* ]]> */ 
-
-//const wordArray = wordPage.content.map((page) => page.word))みたいなイメージで出力するまで！
-//wordPage.content.map((page) => {
-//	console.log(page.word);
-//})
-
-
-
-</script>
 
 
 </body>

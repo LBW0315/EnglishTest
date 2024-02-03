@@ -21,6 +21,8 @@ const pass = document.getElementById("pass");
 const range = document.getElementById("range");
 const cheat = document.getElementById("cheat");
 
+//
+const schoolyear1 =["unit1", "unit2"];
 
 // 複数のテキストを格納する配列
 //const wordPage = ["Hello World", "This is my App", "How are you?"];
@@ -47,6 +49,18 @@ const createText = () => {
 	answer = wordPage[random].word;
 	console.log(answer);
 };
+const getUnit = (e) =>{
+	
+	console.log("yes");
+	
+	document.getElementById("unitselect").innerHTML= <option>aaa</option>;
+	const select = document.getElementById("schoolyear");
+	 fetch("/getunit")
+    .then((response) => response.json())
+    .then((data) => {
+		console.log(data);
+		})
+} 
 
 
 const challengeOneMore = () => {
@@ -252,6 +266,9 @@ start.addEventListener("click", () => {
 
 	});
 });
+
+
+
 
 //スタートボタンを押していない時のテキスト
 questionfield.innerHTML = "①学年と範囲を選びます！<br>②選択完了を押します！<br>③頑張る時間を選びます！";

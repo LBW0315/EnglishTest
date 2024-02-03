@@ -1,8 +1,10 @@
 body {
 	text-align: center;
 	font-family: 'BIZ UDGothic', sans-serif;
-	
+
+
 }
+
 
 /* ゲームの残り秒数が表示されるタイマーの領域 */
 .count {
@@ -15,6 +17,8 @@ body {
 .wrap {
 	margin-top: 10px;
 	padding: 80px 40px;
+	background-image: url('../storage/blackbord2.png');
+	background-size: cover;
 }
 
 
@@ -24,6 +28,6 @@ body {
 }
 
 
-.hidden{
-	display : none;
+.hidden {
+	display: none;
 }
