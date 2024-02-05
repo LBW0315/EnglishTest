@@ -49,6 +49,7 @@ const createText = () => {
 	answer = wordPage[random].word;
 	console.log(answer);
 };
+
 const getUnit = (e) =>{
 	
 	console.log("yes");
