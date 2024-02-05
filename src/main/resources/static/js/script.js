@@ -54,7 +54,7 @@ const getUnit = (e) =>{
 	
 	console.log("yes");
 	
-	document.getElementById("unitselect").innerHTML= <option>aaa</option>;
+	document.getElementById("unitselect").innerHTML= '<option>aaa</option>';
 	const select = document.getElementById("schoolyear");
 	 fetch("/getunit")
     .then((response) => response.json())
