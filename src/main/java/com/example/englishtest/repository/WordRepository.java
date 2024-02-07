@@ -10,4 +10,6 @@ import com.example.englishtest.entity.Word;
 public interface WordRepository extends JpaRepository<Word, Integer> {
 	public List<Word> findBySchoolyearAndUnit(int schoolyear, String unit);
 
+	public List<Word> findDistintUnitBySchoolyear(Integer schoolyear);
+
 }

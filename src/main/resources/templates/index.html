@@ -28,6 +28,14 @@
 </head>
 
 <body>
+	<div th:fragment="hogehoge">
+		<div id="hoge">
+			<option th:each="s1 : ${units}">
+				<p th:text="${s1}"></p>
+			</option>
+			aaaa
+		</div>
+	</div>
 
 	<!-- ヘッダー -->
 	<div th:replace="~{fragment :: header}"></div>
@@ -36,11 +44,7 @@
 		<div class="container pt-4 pb-2">
 			<h1 id="title" class="display-2 mb-text-center">First English</h1>
 		</div>
-		<p>aaaaaa</p>
-		<tr th:each="s1 : ${units}">
-			<p th:text="${s1}"></p>
-			<p>bbbbbbbbbbbbbb</p>
-		</tr>
+
 
 		<!-- この下を選択式にして検索できるようにしたい。 -->
 		<div class="d-flex justify-content-between align-items-end flex-wrap">
@@ -54,21 +58,12 @@
 						<option value="3" th:selected="${schoolyear == 3}">3年生</option>
 					</select>
 
-					<th:block th:if="${schoolyear == 1}">
-						<p>1よ</p>
-						<tr th:each="s1 : ${S1}">
-							<p th:text="${s1}"></p>
-						</tr>
-					</th:block>
-					<th:block th:if="${schoolyear == 2}">
-						<p>2よ</p>
-					</th:block>
-
 
 
 					<!-- 他の検索オプションを追加 -->
 					<select id="unitselect" class="form-control-lg " name="unit">
 						<option selected>教科書の範囲を選んでください。</option>
+
 						<option th:if="${schoolyear ==1}" th:each="s1 : ${S1}" th:value="${s1}"
 							th:selected="${s1 == unit}" th:inline="text">[[${s1}]]</option>
 						<option th:if="${schoolyear ==2}" th:each="s2 : ${S2}" th:value="${s2}"
@@ -77,6 +72,7 @@
 							th:selected="${s3 == unit}" th:inline="text">[[${s1}]]</option>
 
 						<option selected>教科書の範囲を選んでください。</option>
+
 						<option value="U1-1" th:selected="${unit == 'U1-1'}">Unit1-1</option>
 						<option value="U1-2" th:selected="${unit == 'U1-2'}">Unit1-2</option>
 						<option value="U1-3" th:selected="${unit == 'U1-3'}">Unit1-3</option>

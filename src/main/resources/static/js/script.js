@@ -50,18 +50,29 @@ const createText = () => {
 	console.log(answer);
 };
 
-const getUnit = (e) =>{
+const getUnit = () =>{
 	
+	const schoolyear = document.getElementById("schoolyear");
+	const param ={schoolyear : schoolyear.value};
+	const queryParam = new URLSearchParams(param);
+	fetch(`/getunit?${queryParam}`)
+    .then((response) => response.text())
+    .then((data) => {
+		console.log(data);
+		document.getElementById("hoge").innerHTML = data;
+		})
+
+	/*
 	console.log("yes");
-	
-	document.getElementById("unitselect").innerHTML= '<option>aaa</option>';
+	document.getElementById("unitselect").innerHTML= "<option>aaa</option>";
 	const select = document.getElementById("schoolyear");
 	 fetch("/getunit")
     .then((response) => response.json())
     .then((data) => {
 		console.log(data);
-		})
-} 
+		}
+	*/
+}
 
 
 const challengeOneMore = () => {

@@ -1,12 +1,12 @@
 package com.example.englishtest.controller;
 
+import java.util.LinkedHashSet;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.example.englishtest.entity.Word;
 import com.example.englishtest.repository.WordRepository;
@@ -25,15 +25,27 @@ public class HomeController {
 	}
 	
 	@GetMapping("/getunit")
-	public ModelAndView getUnit() {
-		ModelAndView mv = new ModelAndView();
+	public String getUnit(Model model, @RequestParam(name = "schoolyear", required = false) Integer schoolyear) {
+		System.out.println("getUnitメソッド発火");
+				
+		List<Word> units;
+		if (schoolyear != null) {
+			units = wordRepository.findDistintUnitBySchoolyear(schoolyear);
+			System.out.println(true);
+		} else {
+			units = wordRepository.findAll();
+			System.out.println(false);
+		}
+		System.out.println(units);
 		
-		System.out.println("aaaa");
-		String[] units = {"u1", "u2", "u3"};
-		mv.addObject(units);
-		mv.setViewName("index");
+		LinkedHashSet<String> uni = new LinkedHashSet<>();
+		for(Word x : units) {
+			uni.add(x.getUnit());
+			
+		}
 		
-		return mv;
+		model.addAttribute("units", uni);
+		return "index :: hogehoge";
 		
 	}
 
