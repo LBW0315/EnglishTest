@@ -53,15 +53,19 @@
 
 
 					<!-- 他の検索オプションを追加 -->
-					<select id="unitselect" class="form-control-lg " name="unit">
+					<select id="unitselect" th:fragment="hogehoge" class="form-control-lg " name="unit">
 						<option selected>教科書の範囲を選んでください。</option>
-						<select th:fragment="hogehoge">
-							<div id="hoge">
-								<option th:each="s1 : ${units}" th:text="${s1}">
-									aaaa
-								</option>
-							</div>
-						</select>>
+						<option th:each="s1 : ${units}" th:text="${s1}">
+							aaaa
+						</option>
+
+<!--						<select th:fragment="hogehoge">-->
+<!--							<div id="hoge">-->
+<!--								<option th:each="s1 : ${units}" th:text="${s1}">-->
+<!--									aaaa-->
+<!--								</option>-->
+<!--							</div>-->
+<!--						</select>>-->
 
 						<!--						<option th:if="${schoolyear ==1}" th:each="s1 : ${S1}" th:value="${s1}"-->
 						<!--							th:selected="${s1 == unit}" th:inline="text">[[${s1}]]</option>-->
