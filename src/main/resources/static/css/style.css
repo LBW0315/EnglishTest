@@ -5,6 +5,9 @@ body {
 
 }
 
+.btn{
+	cursor: pointer;
+}
 
 /* ゲームの残り秒数が表示されるタイマーの領域 */
 .count {
