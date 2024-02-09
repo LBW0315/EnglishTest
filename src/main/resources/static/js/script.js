@@ -2,7 +2,7 @@
 let question = ""; //問題（日本語）
 let answer = ""; //答え（英単語）
 let typed = ""; //答案（入力したもの）
-let questioncount = 0; //問題数
+let questioncount = -1; //問題数
 let clear = 0; //正当数
 
 // 必要なHTML要素の取得
@@ -20,9 +20,11 @@ const challenge = document.getElementById("challenge");
 const pass = document.getElementById("pass");
 const range = document.getElementById("range");
 const cheat = document.getElementById("cheat");
+//const cleartime = document.getElementById("clear");
+//const misstime = document.getElementById("miss");
 
 //
-const schoolyear1 =["unit1", "unit2"];
+const schoolyear1 = ["unit1", "unit2"];
 
 // 複数のテキストを格納する配列
 //const wordPage = ["Hello World", "This is my App", "How are you?"];
@@ -50,16 +52,16 @@ const createText = () => {
 	console.log(answer);
 };
 
-const getUnit = () =>{
-	
+const getUnit = () => {
+
 	const schoolyear = document.getElementById("schoolyear");
-	const param ={schoolyear : schoolyear.value};
+	const param = { schoolyear: schoolyear.value };
 	const queryParam = new URLSearchParams(param);
 	fetch(`/getunit?${queryParam}`)
-    .then((response) => response.text())
-    .then((data) => {
-		console.log(data);
-		document.getElementById("unitselect").innerHTML = data;
+		.then((response) => response.text())
+		.then((data) => {
+			console.log(data);
+			document.getElementById("unitselect").innerHTML = data;
 		})
 
 	/*
@@ -67,8 +69,8 @@ const getUnit = () =>{
 	document.getElementById("unitselect").innerHTML= "<option>aaa</option>";
 	const select = document.getElementById("schoolyear");
 	 fetch("/getunit")
-    .then((response) => response.json())
-    .then((data) => {
+	.then((response) => response.json())
+	.then((data) => {
 		console.log(data);
 		}
 	*/
@@ -92,46 +94,46 @@ const keyDown = (e) => {
 		typedfield.textContent = typed;
 	} else if (e.key === 'Escape') {
 		//何もしない
-	} else if(e.key === 'Control'){
-		
-	}else if(e.key === 'Shift'){
-		
-	}else if(e.key === 'Alt'){
-		
-	}else if(e.key === 'Eisu'){
-		
-	}else if(e.key === 'F1'){
-		
-	}else if(e.key === 'Tab'){
-		
-	}else if(e.key === 'ArrowDown'){
-		
-	}else if(e.key === 'ArrowUp'){
-		
-	}else if(e.key === 'ArrowRight'){
-		
-	}else if(e.key === 'ArrowLeft'){
-		
-	}else if(e.key === 'Delete'){
-		
-	}else if(e.key === 'End'){
-		
-	}else if(e.key === 'Home'){
-		
-	}else if(e.key === 'PageUp'){
-		
-	}else if(e.key === 'PageDown'){
-		
-	}else if(e.key === 'Clear'){
-		
-	}else {
+	} else if (e.key === 'Control') {
+
+	} else if (e.key === 'Shift') {
+
+	} else if (e.key === 'Alt') {
+
+	} else if (e.key === 'Eisu') {
+
+	} else if (e.key === 'F1') {
+
+	} else if (e.key === 'Tab') {
+
+	} else if (e.key === 'ArrowDown') {
+
+	} else if (e.key === 'ArrowUp') {
+
+	} else if (e.key === 'ArrowRight') {
+
+	} else if (e.key === 'ArrowLeft') {
+
+	} else if (e.key === 'Delete') {
+
+	} else if (e.key === 'End') {
+
+	} else if (e.key === 'Home') {
+
+	} else if (e.key === 'PageUp') {
+
+	} else if (e.key === 'PageDown') {
+
+	} else if (e.key === 'Clear') {
+
+	} else {
 
 		typed += key;
 		typedfield.textContent = typed;
 	}
-	
-	
-	
+
+
+
 
 
 	console.log(e.key);
@@ -151,10 +153,10 @@ const scoring = () => {
 	//間違っていた場合
 	if (typed !== answer) {
 		//赤くなって0.2秒で消える
-		wrap.classList.add("mistyped");
+		wrap.style.backgroundImage = 'url("../storage/B76F27D8-3939-4AF7-B1F0-DA7769689696_4_5005_c.jpeg")';
 		setTimeout(() => {
-			wrap.classList.remove("mistyped");
-		}, 200);
+			wrap.style.backgroundImage = 'none';
+		}, 1500);
 		//解答欄をリセットする
 		challengeOneMore();
 
@@ -162,6 +164,10 @@ const scoring = () => {
 	}
 	//正しい場合
 	//新しい問題を作る
+	wrap.style.backgroundImage = 'url("../storage/E141E295-8DF3-4529-84AF-BF0E04D1CE6B.png")';
+	setTimeout(() => {
+		wrap.style.backgroundImage = 'none';
+	}, 1500);
 	createText();
 	//正解数を足す
 	clear++;
@@ -227,7 +233,7 @@ start.addEventListener("click", () => {
 	//ランダムなテキストを表示する
 	createText();
 
-	//選択したカウントダウンの秒数を代入する(うまくいかない・・・)
+	//選択したカウントダウンの秒数を代入する
 	createCount();
 
 	//カウントダウンタイマーを開始する
@@ -273,7 +279,7 @@ start.addEventListener("click", () => {
 
 		if (e.key === ' ') {
 			kanning();
-			
+
 		}
 
 	});
