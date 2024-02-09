@@ -157,11 +157,13 @@ const scoring = () => {
 	if (typed !== answer) {
 		//赤くなって0.2秒で消える
 		wrap.style.backgroundImage = 'url("../storage/B76F27D8-3939-4AF7-B1F0-DA7769689696_4_5005_c.jpeg"),url("../storage/blackbord2.png")';
-		wrap.style.backgroundSize = 'contain';
+		wrap.style.backgroundPosition = 'right, center';
+		wrap.style.backgroundSize = 'contain, cover';
 
 		wrap.style.backgroundRepeat = 'no-repeat';
 		setTimeout(() => {
 			wrap.style.backgroundImage = 'url("../storage/blackbord2.png")';
+			wrap.style.backgroundSize = 'cover';
 		}, 1500);
 		//解答欄をリセットする
 		challengeOneMore();
@@ -171,11 +173,13 @@ const scoring = () => {
 	//正しい場合
 	//新しい問題を作る
 	wrap.style.backgroundImage = 'url("../storage/E141E295-8DF3-4529-84AF-BF0E04D1CE6B.png"),url("../storage/blackbord2.png")';
-	wrap.style.backgroundSize = 'contain';
+	wrap.style.backgroundPosition = 'right, center';
+	wrap.style.backgroundSize = 'contain, cover';
 
 	wrap.style.backgroundRepeat = 'no-repeat';
 	setTimeout(() => {
 		wrap.style.backgroundImage = 'url("../storage/blackbord2.png")';
+		wrap.style.backgroundSize = 'cover';
 	}, 1500);
 	createText();
 	//正解数を足す
