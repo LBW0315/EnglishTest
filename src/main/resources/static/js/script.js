@@ -155,8 +155,8 @@ const kanning = () => {
 const scoring = () => {
 	//間違っていた場合
 	if (typed !== answer) {
-		//赤くなって0.2秒で消える
-		wrap.style.backgroundImage = 'url("../storage/B76F27D8-3939-4AF7-B1F0-DA7769689696_4_5005_c.jpeg"),url("../storage/blackbord2.png")';
+		//赤くなって1.5秒で消える
+		wrap.style.backgroundImage = 'url("../storage/miss.png"),url("../storage/blackbord2.png")';
 		wrap.style.backgroundPosition = 'right, center';
 		wrap.style.backgroundSize = 'contain, cover';
 
