@@ -5,9 +5,15 @@ body {
 
 }
 
-.btn{
-	cursor: pointer;
-}
+/*.btn{*/
+/*	cursor: pointer;*/
+/*	float: right;*/
+/*}*/
+
+/*.btn:hover{*/
+/*	background-color:rgb(25, 17, 7)*/
+/*}*/
+
 
 /* ゲームの残り秒数が表示されるタイマーの領域 */
 .count {
