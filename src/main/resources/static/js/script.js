@@ -20,8 +20,7 @@ const challenge = document.getElementById("challenge");
 const pass = document.getElementById("pass");
 const range = document.getElementById("range");
 const cheat = document.getElementById("cheat");
-//const cleartime = document.getElementById("clear");
-//const misstime = document.getElementById("miss");
+
 
 //
 const schoolyear1 = ["unit1", "unit2"];
@@ -43,6 +42,10 @@ const createText = () => {
 	// 配列のインデックス数からランダムな数値を生成する
 	let random = Math.floor(Math.random() * wordPage.length);
 
+
+	//CSSで設定したfade-inクラスを適応している。
+	questionfield.classList.add("fade-in");
+
 	//questionに意味（日本語）を代入している
 	question = wordPage[random].mean;
 	console.log(question);
@@ -50,6 +53,12 @@ const createText = () => {
 	//answerに答え（英単語）を代入している
 	answer = wordPage[random].word;
 	console.log(answer);
+
+	// トランジションを発火させる
+	setTimeout(() => {
+		questionfield.style.opacity = 1;
+	}, 0);
+
 };
 
 const getUnit = () => {
